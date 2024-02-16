@@ -1,5 +1,223 @@
+@import './fonts/fontawesome-free-5.14.0-web/css/all.min.css';
+
+@font-face {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: normal;
+    src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    font-weight: normal;
+    font-style: italic;
+    src: url(./fonts/Roboto/Roboto-Italic.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    font-weight: bold;
+    font-style: normal;
+    src: url(./fonts/Roboto/Roboto-Bold.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+:root {
+    --color-primary: rgb(48, 48, 48);
+    --color-secondary: rgb(19, 131, 223);
+    --color-white: rgb(241, 241, 241);
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+section, .form, .footer {
+    padding: 40px 0 40px 0;
+}
+
+a, button {
+    color: inherit;
+    cursor: pointer;
+}
+.input, .button {
+    min-width: 150px;
+    min-height: 45px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    display: block;
+}
+.input {
+    padding: 0.5rem 1rem;
+    
+}
+.button {
+    background-color: var(--color-secondary);
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.logo__first {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+    border-radius: 0 10px;
+}
+.header__container {
+    justify-content: space-between;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+.nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+.nav__link:last-child {
+    margin-right: 0;
+}
+
+.underline-span > span {
+    position: relative;
+}
+.underline-span > span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.2s;
+}
+.underline-span:hover > span:after {
+    left: 0;
+    width: 100%;
+}
+.underline-span_color_primary > span:after {
+    background-color: var(--color-primary);
+}
+.underline-span_color_white > span:after {
+    background-color: var(--color-white);
+}
+
+.empty-space {
+    flex-grow: 1;
+}
+.footer-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.footer {
+    background-color: var(--color-secondary);
+}
+.footer__nav {
+    text-decoration: underline;
+}
+.footer__container {
+    justify-content: space-between;
+}
+.footer__telephone {
+    cursor: pointer;
+}
+
+.about {
+    background-image: url(./images/roads/empty-paved-road-at-sunset-in-the-chilean-patagonia-royalty-free-image-1591901619.jpg);
+}
+
+.form .input {
+    width: 100%;
+}
+.form__row > :not(:last-child) {
+    margin-right: 0.5rem;
+}
+.form__button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mb-1 {
+    margin-bottom: 0.5rem;
+}
+.mb-2 {
+    margin-bottom: 1rem;
+}
+.mb-3 {
+    margin-bottom: 2rem;
+}
+
+.new {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+.new:last-child {
+    margin-bottom: 0;
+}
+.new__img {
+    width: 100px;
+    height: 100%;
+    margin-right: 1rem;
+}
+.new__name {
+    margin-bottom: 1rem;
+}
+.new__description {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+.new__link {
+    color: rgb(128, 128, 128);
+}
+
+.input__sm {
+    width: 25% !important;
+}
+.input__md {
+    width: 50% !important;
+}
+.label__legend {
+    margin-bottom: 1px;
+    display: block;
+}
+label {
+    display: block;
+}
+.info__text {
+    padding-right: 1rem;
+}
+.info {
+    font-size: 1.5rem;
 }
