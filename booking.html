@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/main.css">
+    <script defer src="./scripts/nav.js"></script>
 </head>
 <body>
     <header class="header">
@@ -21,86 +22,101 @@
         </div>
     </header>
 
+
+
     <form class="form">
         <div class="container">
-            <h3 class="mb-1">Данные о авто</h3>
-            <div class="row form__row mb-2">
-                <input class="input " type="number" placeholder="Идентификатор">
-                <input class="input" type="number" placeholder="Номер машины">
+
+            <nav class="nav form__nav">
+                <button class="button active" data-activate="form-auto">Данные о авто</button>
+                <button class="button" data-activate="form-client">Данные о клиенте</button>
+                <button class="button" data-activate="form-finish">Финиш</button>
+            </nav>
+
+            <div id="form-auto" class="sub_form active">
+                <h3 class="mb-1">Данные о авто</h3>
+                <div class="row form__row mb-1">
+                    <input class="input " type="number" placeholder="Идентификатор">
+                    <input class="input" type="number" placeholder="Номер машины">
+                </div>
+                <input class="input mb-1" type="text" placeholder="Название авто">
+                <select class="input  mb-2">
+                    <option selected disabled>Марка авто</option>
+                    <option>Бмв</option>
+                    <option>Мерс</option>
+                </select>
+                
+                <div class="row form__row mb-2">
+                    <label>
+                        <span class="label__legend">Дата бронирования</span>
+                        <input class="input " type="date" placeholder="Дата бронирования">
+                    </label>
+                    
+                    <label>
+                        <span class="label__legend">Дата возврата</span>
+                        <input class="input " type="date" placeholder="Дата возврата">
+                    </label>
+                </div>
+                
+                <div class="row form__row mb-3">
+                    <input class="input" type="number" placeholder="Стоимость бронирования за день">
+                    <select class="input">
+                        <option selected disabled>Филиал</option>
+                        <option>Филиал 1</option>
+                        <option>Филиал 2</option>
+                        <option>Филиал 3</option>
+                    </select>
+                </div>
+
+                <div class="form__button">
+                    <button class="button">Бронировать машину</button>
+                </div>
             </div>
-            
-            <input class="input mb-1" type="text" placeholder="Название авто">
-            <select class="input  mb-2">
-                <option selected disabled>Марка авто</option>
-                <option>Бмв</option>
-                <option>Мерс</option>
-            </select>
-            
-            <div class="row form__row mb-2">
-                <label>
-                    <span class="label__legend">Дата бронирования</span>
-                    <input class="input " type="date" placeholder="Дата бронирования">
+
+            <div id="form-client" class="sub_form">
+                <h3 class="mb-1">Данные о клиенте</h3>
+                <input class="input mb-1" type="text" placeholder="Имя">
+                <input class="input mb-1" type="text" placeholder="Фамилия">
+                <input class="input mb-2" type="text" placeholder="Отчество">
+
+                <div class="row form__row mb-2">
+                    <input class="input" type="number" placeholder="Номер телефона">
+                    <input class="input" type="text" placeholder="Паспортные данные">
+                    <input class="input" type="number" placeholder="Банковская карта">
+                </div>
+
+                <label class="mb-3">
+                    <span class="label__legend">Дата рождения</span>
+                    <input class="input mb-1" type="date" placeholder="Банковская карта">
                 </label>
                 
-                <label>
-                    <span class="label__legend">Дата возврата</span>
-                    <input class="input " type="date" placeholder="Дата возврата">
-                </label>
+                <div class="form__button">
+                    <button class="button">Сохранить</button>
+                </div>
             </div>
             
-            <div class="row form__row mb-3">
-                <input class="input" type="number" placeholder="Стоимость бронирования за день">
-                <select class="input">
-                    <option selected disabled>Филиал</option>
-                    <option>Филиал 1</option>
-                    <option>Филиал 2</option>
-                    <option>Филиал 3</option>
+            <div id="form-finish" class="sub_form">
+                <div class="info mb-2">
+                    <span class="info__text">Финальная стоимость:</span>
+                    <span class="info__value">450 000 руб.</span>
+                </div>
+
+                <select class="input mb-1">
+                    <option selected disabled>Выбор машины</option>
+                    <option>Машина 1</option>
+                    <option>Машина 2</option>
+                    <option>Машина 3</option>
                 </select>
-            </div>
+                <select class="input mb-3">
+                    <option selected disabled>Выбор банковской карты</option>
+                    <option>Банковская карта 1</option>
+                    <option>Банковская карта 2</option>
+                    <option>Банковская карта 3</option>
+                </select>
 
-            
-            <h3 class="mb-1">Данные о клиенте</h3>
-            <input class="input mb-1" type="text" placeholder="Имя">
-            <input class="input mb-1" type="text" placeholder="Фамилия">
-            <input class="input mb-2" type="text" placeholder="отчество">
-
-            
-
-            <div class="row form__row mb-2">
-                <input class="input" type="number" placeholder="Номер телефона">
-                <input class="input" type="text" placeholder="Паспортные данные">
-                <input class="input" type="number" placeholder="Банковская карта">
-            </div>
-
-            <label class="mb-2">
-                <span class="label__legend">Дата рождения</span>
-                <input class="input mb-1" type="date" placeholder="Банковская карта">
-            </label>
-            
-            <div class="form__button">
-                <button class="button mb-3">Бронировать машину</button>
-            </div>
-
-            <div class="info mb-2">
-                <span class="info__text">Финальная стоимость</span>
-                <span class="info__value">450 000 руб.</span>
-            </div>
-
-            <select class="input mb-1">
-                <option selected disabled>Выбор машины</option>
-                <option>Машина 1</option>
-                <option>Машина 2</option>
-                <option>Машина 3</option>
-            </select>
-            <select class="input mb-3">
-                <option selected disabled>Выбор банковской карты</option>
-                <option>Банковская карта 1</option>
-                <option>Банковская карта 2</option>
-                <option>Банковская карта 3</option>
-            </select>
-
-            <div class="form__button">
-                <button class="button">Оформить бронирование</button>
+                <div class="form__button">
+                    <button class="button">Оформить бронирование</button>
+                </div>
             </div>
             
         </div>

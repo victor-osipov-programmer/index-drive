@@ -68,6 +68,7 @@ a, button {
     outline: none;
     font-size: 1.5rem;
     display: block;
+    border-radius: 5px;
 }
 .input {
     padding: 0.5rem 1rem;
@@ -215,9 +216,79 @@ a, button {
 label {
     display: block;
 }
+
 .info__text {
-    padding-right: 1rem;
+    color: rgb(216, 216, 216);
 }
 .info {
     font-size: 1.5rem;
+}
+.booking__info-arenda .info__text {
+    display: block;
+}
+.sub_form:not(.active) {
+    display: none;
+}
+.form__nav button {
+    width: 100%;
+}
+.form__nav {
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 40px;
+}
+.form__nav .button:not(.active) {
+    background-color: rgb(85, 128, 163);;
+}
+.booking__info-arenda {
+    display: grid;
+    gap: 1rem;
+    grid-template: repeat(3, auto) / repeat(3, auto);
+}
+.booking__img {
+    width: 100%;
+    height: 100%;
+}
+.bookings__item {
+    background-color: rgb(71, 71, 71);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.booking__img-container {
+    background-color: var(--color-white);
+    border-radius: 5px;
+}
+.booking__price {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+.hr {
+    margin: 1rem 0;
+    border: 1px solid rgb(95, 95, 95);
+}
+.booking__button {
+    text-wrap: nowrap;
+    width: 100%;
+}
+.flex-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.booking__info-arenda :is(.booking__days-text, .booking__number-text)  {
+    display: inline;
+}
+.booking__days {
+    display: inline;
+    font-size: 2rem;
+    text-align: right;
+}
+.booking__filial, .booking__days-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
