@@ -38,10 +38,11 @@ body {
     --color-primary: rgb(48, 48, 48);
     --color-secondary: rgb(19, 131, 223);
     --color-white: rgb(241, 241, 241);
+    --color-grey: rgb(95, 95, 95);
 }
 
 .container {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .column {
@@ -267,7 +268,7 @@ label {
 }
 .hr {
     margin: 1rem 0;
-    border: 1px solid rgb(95, 95, 95);
+    border: 1px solid var(--color-grey);
 }
 .booking__button {
     text-wrap: nowrap;
@@ -291,4 +292,90 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+.full-name {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.bals {
+    background-color: var(--color-white);
+    border-radius: 50%;
+    color: var(--color-secondary);
+    width: 100px;
+    height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.bals-box {
+    font-size: 2rem;
+    align-items: center;
+}
+.profile-info {
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.filials__container {
+    position: relative;
+    /* height: 100px; */
+}
+.filials__img {
+    width: 100%;
+}
+.filial__name {
+    width: max-content;
+    border-radius: 5px;
+    padding: 0.5rem;
+    /* margin-bottom: 16px; */
+    background-color: var(--color-secondary);
+}
+.filial__point {
+    background-color: red;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.filial {
+    position: absolute;
+    cursor: pointer;
+}
+.filial:nth-of-type(1) {
+    bottom: 40%;
+    left: 54%;
+}
+.filial:nth-of-type(2) {
+    bottom: 15%;
+    left: 5%;
+}
+.filial:nth-of-type(3) {
+    bottom: 85%;
+    left: 49%;
+}
+.filial:nth-of-type(4) {
+    bottom: 26%;
+    left: 76%;
+}
+.filial:nth-of-type(5) {
+    bottom: 50%;
+    left: 4%;
+}
+.selected-filial {
+    margin-bottom: 40px;
+}
+.selected-filial__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--color-grey);
+    padding: 1rem;
+    border-radius: 5px;
+}
+.selected-filial__img {
+    cursor: pointer;
+    width: 100%;
+}
+.selected-filial:not(.active) {
+    display: none;
 }
