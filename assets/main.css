@@ -379,3 +379,28 @@ label {
 .selected-filial:not(.active) {
     display: none;
 }
+th, td {
+    padding: 0.5rem 1rem;
+}
+table {
+    background-color: var(--color-grey);
+    border-radius: 5px;
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-card__card-number {
+    width: 100%;
+}
+.add-card:not(.active) {
+    display: none;
+}
